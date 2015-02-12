@@ -18,6 +18,12 @@
     height: 40em; 
  }
 
+ .books-section {
+ 	margin-top: 5em;
+ 	padding-right: 10%; 
+ 	padding-left: 10%;
+ }
+
 .bg-image {
   position: relative;
   background-image: url("/assets/open_book.jpg"); 
