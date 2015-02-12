@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$( document ).ready(function() {
+	shakeButton();
+	openNav();
+});
+
+function shakeButton(){
+	setInterval(function(){
+	      $('#nav-button').addClass("animated swing").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd onanimationend', function() {
+			$(this).removeClass('animated swing')
+		  })
+    },4000);
+}
+
+function openNav(){
+	$('#nav-button').click(function() {
+		$('.sidebar').sidebar('toggle')
+	});
+}
