@@ -21,14 +21,14 @@ $( document ).ready(function() {
 
 function shakeButton(){
 	setInterval(function(){
-	      $('.nav-button').addClass("animated swing").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd onanimationend', function() {
+	      $('#nav-button').addClass("animated swing").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd onanimationend', function() {
 			$(this).removeClass('animated swing')
 		  })
     },4000);
 }
 
 function openNav(){
-	$('.nav-button')[0].click(function(event) {
-		console.log("daf"); 
+	$('#nav-button').click(function() {
+		$('.sidebar').sidebar('toggle')
 	});
 }
