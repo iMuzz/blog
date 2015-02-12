@@ -6,9 +6,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="pusher"> <!-- This is necessary for slideout navbar -->
 
 <%= yield %>
 
+	 </div>
 </body>
   <%= javascript_include_tag 'application' %>
 </html>
