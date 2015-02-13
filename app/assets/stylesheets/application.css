@@ -24,6 +24,10 @@
  	padding-left: 10%;
  }
 
+ #img-height {
+ 	height: 350px;
+ }
+
 .bg-image {
   position: relative;
   background-image: url("/assets/open_book.jpg"); 

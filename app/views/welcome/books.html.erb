@@ -8,8 +8,8 @@
 		<div class="ui four wide cards">
 		    <% @currently_reading.each do |book| %>
 			  <div class="card">
-			    <div class="image book-image">
-			      <img src="<%= book.image %>">
+			    <div class="image">
+			      <img id="img-height" src="<%= book.image %>">
 			    </div>
 			    <div class="extra">
 			      Rating:
