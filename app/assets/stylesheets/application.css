@@ -13,12 +13,7 @@
  *= require_tree .
  *= require_self
  */
- * { background-color: rgba(255,0,0,.2); }
-* * { background-color: rgba(0,255,0,.2); }
-* * * { background-color: rgba(0,0,255,.2); }
-* * * * { background-color: rgba(255,0,255,.2); }
-* * * * * { background-color: rgba(0,255,255,.2); }
-* * * * * * { background-color: rgba(255,255,0,.2); }
+
  .top-section {
  	width: 100%; 
     height: 40em; 
@@ -31,7 +26,11 @@
  }
 
  #img-height {
- 	height: 21em;
+ 	height: 23em;
+ 	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
 }
 
 .bg-image {
@@ -71,5 +70,43 @@ and (max-device-width : 667px) {
 	    height: 50em; 
 	    z-index: -1;
  }
+}
 
+@media only screen 
+and (min-width : 400px) 
+and (max-width : 500px) { 
+	#img-height {
+ 	height: 18em;
+	}
+}
+
+@media only screen 
+and (min-width : 500px) 
+and (max-width : 600px) { 
+	#img-height {
+ 	height: 23em;
+	}
+}
+
+@media only screen 
+and (min-width : 600px) 
+and (max-width : 767px) { 
+	#img-height {
+ 	height: 28em;
+	}
+}
+
+@media only screen 
+and (min-width : 991px) 
+and (max-width : 1420px) { 
+	#img-height {
+ 	height: 15em;
+	}
+}
+@media only screen 
+and (min-width : 1420px) 
+and (max-width : 1520px) { 
+	#img-height {
+ 	height: 17em;
+	}
 }
