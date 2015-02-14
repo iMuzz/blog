@@ -1,5 +1,5 @@
 module WelcomeHelper
-  def update_books
+  def updateBooks
     updateCurrentlyReading
     updateRead
   end

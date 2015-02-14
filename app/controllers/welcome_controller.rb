@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   include WelcomeHelper
   
   def home
-    update_books
+    updateBooks
     @currently_reading = Book.all
     render "books"
   end
