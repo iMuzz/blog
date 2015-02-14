@@ -6,8 +6,8 @@ class Book < ActiveRecord::Base
 
   private
   def get_image
-    books = GoogleBooks.search(self.title)
-    self.image = books.first.image_link(zoom: 2)
+    books = GoogleBooks.search(self.title, {api_key: ENV['GOOGlE_KEY']})
+    self.image = books.first.image_link(zoom: 1)
     self.save
   end
 end
