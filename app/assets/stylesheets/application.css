@@ -18,6 +18,28 @@
     height: 40em; 
  }
 
+ .books-section {
+ 	margin-top: 5em;
+ 	padding-right: 10%; 
+ 	padding-left: 10%;
+ }
+
+/* div.card-width {
+ 	max-width: 170px;
+ }
+
+ .image-size {
+	max-height: 350px;
+	max-width: 170px;
+	height: auto;
+	width: auto;
+ }*/
+ #img-height {
+ 	/*min-height: 250px;*/
+ 	max-height: 277px;
+ 	/*max-width: 185px;*/
+}
+
 .bg-image {
   position: relative;
   background-image: url("/assets/open_book.jpg"); 
@@ -25,13 +47,12 @@
 }
 
 .circular-icon {
-	position: absolute;
+	position: fixed;
 	margin-left: 2em;
 	margin-top: 1em;
 	width: 50px;
 	height: 50px;
 	line-height: 58px;
-	background-color: white;
 	border-radius: 100%;
 	text-align: center;
 	-webkit-transition: all .5s ease;
@@ -39,9 +60,13 @@
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
 }
- 
- .orange {
- 	color: #FA6900;
+
+.bg-grey {
+	background-color: #D4D0D0;
+}
+
+ .white {
+ 	color: white;
  }
 
 @media only screen 
@@ -52,4 +77,5 @@ and (max-device-width : 667px) {
 	    height: 50em; 
 	    z-index: -1;
  }
+
 }
