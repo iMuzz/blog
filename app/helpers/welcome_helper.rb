@@ -14,7 +14,6 @@ module WelcomeHelper
 
   def update_read
     read = GoodReadsClient.shelf("17272747", "read", {per_page: 100})
-    binding.pry
      read[:books].each do |book|
       b = Book.create(title: book[:book][:title], author: book[:book][:authors][:author][:name])
       Read.create(book_id: b.id)
