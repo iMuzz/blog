@@ -15,8 +15,8 @@
 //= require turbolinks
 //= require_tree .
 $( document ).ready(function() {
-	shakeButton();
-	openNav();
+	shakeButton()
+	openNav()
 });
 
 function shakeButton(){
