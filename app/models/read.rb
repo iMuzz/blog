@@ -8,6 +8,8 @@ class Read < ActiveRecord::Base
 
   def removeFromCurrentlyReading
     book = CurrentReading.find_by(id: self.book_id)
-    book.destroy if not book
+    if book.nil? != true
+      book.destroy
+    end
   end
 end
