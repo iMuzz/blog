@@ -7,7 +7,7 @@ module WelcomeHelper
   def update_currently_reading
     current_reading = GoodReadsClient.shelf("17272747", "currently-reading")
     current_reading[:books].each do |book|
-      b = Book.create(title: book[:book][:title], author: book[:book][:authors][:author][:name])
+      b = Book.create(title: book[:book][:title], author: book[:book][:authors][:author][:name], isbn: book[:book][:isbn13])
       CurrentReading.create(book_id: b.id)
     end
   end
