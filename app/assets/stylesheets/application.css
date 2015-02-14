@@ -24,9 +24,21 @@
  	padding-left: 10%;
  }
 
- #img-height {
- 	height: 250px;
+/* div.card-width {
+ 	max-width: 170px;
  }
+
+ .image-size {
+	max-height: 350px;
+	max-width: 170px;
+	height: auto;
+	width: auto;
+ }*/
+ #img-height {
+ 	/*min-height: 250px;*/
+ 	max-height: 277px;
+ 	/*max-width: 185px;*/
+}
 
 .bg-image {
   position: relative;
