@@ -1,10 +1,10 @@
 module WelcomeHelper
   def update_books
-    update_currently_reading
-    update_read
+    updateCurrentlyReading
+    updateRead
   end
 
-  def update_currently_reading
+  def updateCurrentlyReading
     current_reading = GoodReadsClient.shelf("17272747", "currently-reading")
     current_reading[:books].each do |book|
       b = Book.create(title: book[:book][:title], author: book[:book][:authors][:author][:name], isbn: book[:book][:isbn13])
@@ -12,10 +12,10 @@ module WelcomeHelper
     end
   end
 
-  def update_read
+  def updateRead
     read = GoodReadsClient.shelf("17272747", "read", {per_page: 100})
      read[:books].each do |book|
-      b = Book.create(title: book[:book][:title], author: book[:book][:authors][:author][:name])
+      b = Book.find_or_create_by(title: book[:book][:title], author: book[:book][:authors][:author][:name])
       Read.create(book_id: b.id, stars: book[:rating])
     end
   end
