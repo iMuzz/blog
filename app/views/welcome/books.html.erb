@@ -4,9 +4,26 @@
 			<i class="fa fa-bars fa-2x white"></i>
 		</div>
 	</div>
+	<div class="currently-reading">
+		<h2> Currently Reading </h2>
+	</div>
 	<div class="books-section">
 		<div class="ui six doubling cards">
 		    <% @currently_reading.each do |book| %>
+			  <div class="card card-width">
+			    <div class="image image-size">
+			      <img id="img-height" src="<%= book.image %>">
+			    </div>
+			  </div>
+			<% end %>
+		</div>
+	</div>
+	<div class="currently-reading">
+		<h2> Read </h2>
+	</div>
+	<div class="books-section">
+		<div class="ui six doubling cards">
+		    <% @finished_reading.each do |book| %>
 			  <div class="card card-width">
 			    <div class="image image-size">
 			      <img id="img-height" src="<%= book.image %>">

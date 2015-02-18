@@ -3,7 +3,8 @@ class WelcomeController < ApplicationController
   
   def home
     updateBooks
-    @currently_reading = Book.all
+    @currently_reading = CurrentReading.books
+    @finished_reading = Read.books
     render "books"
   end
 end
