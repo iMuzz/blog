@@ -67,6 +67,11 @@
  	color: white;
  }
 
+ .rise:hover {
+	-ms-transform: translate(0px,-5px); /* IE 9 */
+   	-webkit-transform: translate(0px,-5px); /* Chrome, Safari, Opera */
+ }
+
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 667px) { 
