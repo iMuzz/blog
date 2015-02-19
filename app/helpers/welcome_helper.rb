@@ -16,6 +16,8 @@ module WelcomeHelper
     read = GoodReadsClient.shelf("17272747", "read", {per_page: 100})
      read[:books].each do |book|
       b = Book.find_or_create_by(title: book[:book][:title], author: book[:book][:authors][:author][:name])
+      b.rating = book[:rating]
+      b.save
       Read.create(book_id: b.id, stars: book[:rating])
     end
   end

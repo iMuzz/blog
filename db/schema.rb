@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150213055839) do
     t.string   "author"
     t.string   "image"
     t.string   "isbn"
+    t.integer  "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

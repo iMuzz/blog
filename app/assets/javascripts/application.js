@@ -17,6 +17,7 @@
 $( document ).ready(function() {
 	shakeButton()
 	openNav()
+	showRatings()
 })
 
 function shakeButton(){
@@ -31,4 +32,8 @@ function openNav(){
 	$('#nav-button').click(function() {
 		$('.sidebar').sidebar('toggle')
 	})
+}
+
+function showRatings(){
+	$('.ui.rating').rating();
 }
