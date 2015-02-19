@@ -5,6 +5,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :author
       t.string :image
       t.string :isbn
+      t.integer :rating
 
       t.timestamps null: false
     end
