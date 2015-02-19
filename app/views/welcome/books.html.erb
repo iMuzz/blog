@@ -18,9 +18,11 @@
 			<% end %>
 		</div>
 	</div>
+
 	<div class="currently-reading">
 		<h2> Read </h2>
 	</div>
+	
 	<div class="books-section">
 		<div class="ui six doubling cards">
 		    <% @finished_reading.each do |read| %>
@@ -29,13 +31,17 @@
 				  	<div class="reviewed-flag">
 				  		<p>Reviewed</p>
 				  	</div>
+				  	<a href="/read/<%= read.id %>" data-remote="true">
+					    <div class="image">
+					      <img id="img-height" src="<%= read.book.image %>">
+					    </div>
+				    </a>
+			  	<% else %>
+					<div class="image">
+					    <img id="img-height" src="<%= read.book.image %>">
+				    </div>
 			  	<% end %>
-			    <div class="image image-size">
-			      <img id="img-height" src="<%= read.book.image %>">
-			    </div>
-			     <div class="extra"> 
-			      <center><div class="ui star rating" data-rating="<%= read.book.rating %>" data-max-rating="5"></div></center>
-			    </div>
+			    <%= render partial: 'stars', locals: {rating: read.book.rating}%>
 			  </div>
 			<% end %>
 		</div>
