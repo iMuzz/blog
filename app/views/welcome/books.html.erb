@@ -23,14 +23,14 @@
 	</div>
 	<div class="books-section">
 		<div class="ui six doubling cards">
-		    <% @finished_reading.each do |book| %>
+		    <% @finished_reading.each do |read| %>
 			  <div class="card card-width">
 			    <div class="image image-size">
-			      <img id="img-height" src="<%= book.image %>">
+			      <img id="img-height" src="<%= read.book.image %>">
 			    </div>
 			     <div class="extra">
 			      Rating:   
-			      <div class="ui star rating" data-rating="<%= book.rating %>" data-max-rating="5"></div>
+			      <div class="ui star rating" data-rating="<%= read.book.rating %>" data-max-rating="5"></div>
 			    </div>
 			  </div>
 			<% end %>
