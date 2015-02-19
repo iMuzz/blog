@@ -25,6 +25,9 @@
 		<div class="ui six doubling cards">
 		    <% @finished_reading.each do |read| %>
 			  <div class="card card-width rise">
+			  	<div class="reviewed-flag">
+			  		<p>Reviewed</p>
+			  	</div>
 			    <div class="image image-size">
 			      <img id="img-height" src="<%= read.book.image %>">
 			    </div>
