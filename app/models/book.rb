@@ -1,4 +1,5 @@
 class Book < ActiveRecord::Base
+  has_one :read
   validates_uniqueness_of :title, scope: :author
   validates_presence_of :title, :author
 
