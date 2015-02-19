@@ -20,10 +20,15 @@
  }
 
  .books-section {
- 	margin-top: 5em;
+ 	margin-top: 2.2em;
  	padding-right: 10%; 
  	padding-left: 10%;
  }
+
+.currently-reading h2 {
+	margin-top: 1em;
+	text-align: center;
+}
 
  #img-height {
  	height: 23em;

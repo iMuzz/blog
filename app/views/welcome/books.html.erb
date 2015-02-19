@@ -4,6 +4,9 @@
 			<i class="fa fa-bars fa-2x white"></i>
 		</div>
 	</div>
+	<div class="currently-reading">
+		<h2> Currently Reading </h2>
+	</div>
 	<div class="books-section">
 		<div class="ui six doubling cards">
 		    <% @currently_reading.each do |book| %>
@@ -15,3 +18,35 @@
 			<% end %>
 		</div>
 	</div>
+	<div class="currently-reading">
+		<h2> Read </h2>
+	</div>
+	<div class="books-section">
+		<div class="ui six doubling cards">
+		    <% @finished_reading.each do |book| %>
+			  <div class="card card-width">
+			    <div class="image image-size">
+			      <img id="img-height" src="<%= book.image %>">
+			    </div>
+			  </div>
+			<% end %>
+		</div>
+	</div>
+	<!-- <div class="ui modal">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Modal Title
+	  </div>
+	  <div class="content">
+	    <div class="image">
+	      An image can appear on left or an icon
+	    </div>
+	    <div class="description">
+	      A description can appear on the right
+	    </div>
+	  </div>
+	  <div class="actions">
+	    <div class="ui button">Cancel</div>
+	    <div class="ui button">OK</div>
+	  </div>
+	</div> -->
