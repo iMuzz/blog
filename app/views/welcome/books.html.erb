@@ -28,11 +28,16 @@
 			    <div class="image image-size">
 			      <img id="img-height" src="<%= book.image %>">
 			    </div>
+			     <div class="extra">
+			      Rating:   
+			      <div class="ui star rating" data-rating="<%= book.rating %>" data-max-rating="5"></div>
+			    </div>
 			  </div>
 			<% end %>
 		</div>
 	</div>
-	<!-- <div class="ui modal">
+
+	<div class="ui modal">
 	  <i class="close icon"></i>
 	  <div class="header">
 	    Modal Title
@@ -42,11 +47,11 @@
 	      An image can appear on left or an icon
 	    </div>
 	    <div class="description">
-	      A description can appear on the right
+	      	<div class="ui star rating" data-rating="3" data-max-rating="5">Hello</div>
 	    </div>
 	  </div>
 	  <div class="actions">
 	    <div class="ui button">Cancel</div>
 	    <div class="ui button">OK</div>
 	  </div>
-	</div> -->
+	</div>
