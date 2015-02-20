@@ -18,6 +18,7 @@ $( document ).ready(function() {
 	shakeButton()
 	openNav()
 	showRatings()
+	getBookReview()
 })
 
 function shakeButton(){
@@ -36,4 +37,10 @@ function openNav(){
 
 function showRatings(){
 	$('.ui.rating').rating();
+}
+
+function getBookReview() {
+	$('.card').click(function(event) {
+		$(this).find('form').submit();
+	});
 }

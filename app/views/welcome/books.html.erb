@@ -31,11 +31,13 @@
 				  	<div class="reviewed-flag">
 				  		<p>Reviewed</p>
 				  	</div>
-				  	<a href="/read/<%= read.id %>" data-remote="true">
-					    <div class="image">
+				  	<form action="/read" data-remote="true" method="post">
+				  		<input type="hidden" name='id' value="<%= read.id%>">
+					    <div class="review-form" class="image">
 					      <img id="img-height" src="<%= read.book.image %>">
 					    </div>
-				    </a>
+					</form>    
+
 			  	<% else %>
 					<div class="image">
 					    <img id="img-height" src="<%= read.book.image %>">

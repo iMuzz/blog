@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(version: 20150213055839) do
   create_table "reads", force: :cascade do |t|
     t.integer  "book_id"
     t.integer  "stars"
-    t.string   "notes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "notes",      default: ""
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

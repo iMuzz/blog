@@ -3,7 +3,7 @@ class CreateReads < ActiveRecord::Migration
     create_table :reads do |t|
       t.integer :book_id
       t.integer :stars
-      t.string :notes, default: ""
+      t.text :notes, default: ""
 
       t.timestamps null: false
     end

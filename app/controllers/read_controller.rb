@@ -1,6 +1,6 @@
 class ReadController < ApplicationController
 
-  def show
+  def create
     @read = Read.includes(:book).find_by(id: params[:id])
   end
 
