@@ -1,0 +1,6 @@
+var notes = "<%= @read.notes%>"
+var title = "<%= @read.book.title%>"
+var image = "<%= @read.book.image%>"
+
+$('#modal-title').text(title)
+$('.book-review').modal('show');
