@@ -46,6 +46,7 @@
 }
 
 .circular-icon {
+	z-index: 999;
 	position: fixed;
 	margin-left: 2em;
 	margin-top: 1em;
