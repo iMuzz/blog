@@ -1,8 +1,12 @@
 class WelcomeController < ApplicationController
   include WelcomeHelper
-  
+
+  def about_me
+    
+  end
+
   def home
-    updateBooks
+    # updateBooks
     @currently_reading = CurrentReading.books
     @finished_reading = Read.books_by_notes
     render "books"
