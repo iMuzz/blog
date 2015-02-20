@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   include WelcomeHelper
 
   def about_me
-    
+    render "about_me"
   end
 
   def home

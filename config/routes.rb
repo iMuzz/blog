@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :read
 
-  get 'welcome/home'
-  root to: "welcome#home"
+  get 'books', to: 'welcome#home'
+  get 'home', to: 'welcome#about_me'
+  
+  root to: "welcome#about_me"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
