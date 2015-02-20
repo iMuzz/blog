@@ -18,40 +18,35 @@
 			<% end %>
 		</div>
 	</div>
+
 	<div class="currently-reading">
 		<h2> Read </h2>
 	</div>
+	
 	<div class="books-section">
 		<div class="ui six doubling cards">
-		    <% @finished_reading.each do |book| %>
-			  <div class="card card-width">
-			    <div class="image image-size">
-			      <img id="img-height" src="<%= book.image %>">
-			    </div>
-			     <div class="extra">
-			      Rating:   
-			      <div class="ui star rating" data-rating="<%= book.rating %>" data-max-rating="5"></div>
-			    </div>
+		    <% @finished_reading.each do |read| %>
+			  <div class="card card-width rise">
+			  	<% if !read.notes.empty?%>
+				  	<div class="reviewed-flag">
+				  		<p>Reviewed</p>
+				  	</div>
+				  	<form action="/read" data-remote="true" method="post">
+				  		<input type="hidden" name='id' value="<%= read.id%>">
+					    <div class="review-form" class="image">
+					      <img id="img-height" src="<%= read.book.image %>">
+					    </div>
+					</form>    
+
+			  	<% else %>
+					<div class="image">
+					    <img id="img-height" src="<%= read.book.image %>">
+				    </div>
+			  	<% end %>
+			    <%= render partial: 'stars', locals: {rating: read.book.rating}%>
 			  </div>
 			<% end %>
 		</div>
 	</div>
 
-	<div class="ui modal">
-	  <i class="close icon"></i>
-	  <div class="header">
-	    Modal Title
-	  </div>
-	  <div class="content">
-	    <div class="image">
-	      An image can appear on left or an icon
-	    </div>
-	    <div class="description">
-	      	<div class="ui star rating" data-rating="3" data-max-rating="5">Hello</div>
-	    </div>
-	  </div>
-	  <div class="actions">
-	    <div class="ui button">Cancel</div>
-	    <div class="ui button">OK</div>
-	  </div>
-	</div>
+	<%= render partial: 'review_modal' %>

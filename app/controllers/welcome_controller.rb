@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   def home
     updateBooks
     @currently_reading = CurrentReading.books
-    @finished_reading = Read.books
+    @finished_reading = Read.books_by_notes
     render "books"
   end
 end

@@ -1,0 +1,10 @@
+var notes = "<%= @read.notes%>"
+var title = "<%= @read.book.title%>"
+var image = "<%= @read.book.image%>"
+var rating = "<%= @read.stars%>"
+
+$('#modal-title').text(title)
+$('#modal-image').empty().append("<img src='" + image + "'></img>") 
+$('#modal-image').append("<div class='ui star rating' data-rating='3' data-max-rating='5'></div>") 
+showRatings()
+$('.book-review').modal('show')
