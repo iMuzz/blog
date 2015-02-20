@@ -3,4 +3,5 @@ var title = "<%= @read.book.title%>"
 var image = "<%= @read.book.image%>"
 
 $('#modal-title').text(title)
+$('#modal-image').empty().append("<img src='" + image + "'></img>")
 $('.book-review').modal('show');
