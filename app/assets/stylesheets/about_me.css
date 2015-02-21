@@ -1,3 +1,13 @@
 .faraaz-img {
   background-image: url("/assets/family.jpg"); 
 } 
+
+.timeline-container {
+	padding-right: 7em;
+	padding-left: 7em;
+}
+
+h2.center {
+	text-align: center;
+}
+
