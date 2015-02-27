@@ -1,13 +1,32 @@
 .faraaz-img {
   background-image: url("/assets/family.jpg"); 
 } 
+@media only screen and (min-width: 1170px) {
 
-.timeline-container {
-	padding-right: 7em;
-	padding-left: 7em;
+	.timeline-container {
+		padding-right: 10em;
+		padding-left: 10em;
+	}
 }
 
 h2.center {
+	margin-top: 14px;
 	text-align: center;
 }
 
+img.timeline-image {
+	width: 250px;
+	height: 200px;
+}
+.center-inner {
+    width: 50%;
+    margin: 0 auto;
+}
+}
+/*
+.cd-timeline-content {
+	max-width: 21em;
+	max-height: 22em;
+	margin-left: 16em;
+	margin-right: 16em;
+}*/
