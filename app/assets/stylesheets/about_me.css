@@ -16,6 +16,10 @@ p{
 	color: black;
 }
 
+h2.nutshell {
+	color: black;
+}
+
 .black {
 	color: black;
 }
@@ -36,11 +40,3 @@ img.timeline-image {
     width: 50%;
     margin: 0 auto;
 }
-}
-/*
-.cd-timeline-content {
-	max-width: 21em;
-	max-height: 22em;
-	margin-left: 16em;
-	margin-right: 16em;
-}*/
