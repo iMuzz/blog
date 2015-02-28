@@ -1,14 +1,32 @@
 .faraaz-img {
-  background-image: url("/assets/family.jpg"); 
-} 
+  background-image: url("/assets/background.jpg"); 
+}
+
+div.time-point {
+	/*width: 40px;
+	height: 40px;
+	margin-left: -20px;
+	margin-top: 10px;*/
+	background-color: white;
+}
 @media only screen and (min-width: 1170px) {
 
 	.timeline-container {
-		padding-right: 10em;
-		padding-left: 10em;
+		padding-right: 12em;
+		padding-left: 12em;
 	}
 }
+p{
+	color: black;
+}
 
+.black {
+	color: black;
+}
+
+.currently-reading h2.nutshell {
+	margin-top: 2em;
+}
 h2.center {
 	margin-top: 14px;
 	text-align: center;
