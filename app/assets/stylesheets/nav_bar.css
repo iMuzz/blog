@@ -13,3 +13,12 @@ div.nav-image {
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
+
+a.nav-item {
+	min-height: 50px;
+	text-align: center;
+}
+.item.nav-item {
+	font-size: 1.3rem !important;
+	padding-top: 17px !important;
+}
