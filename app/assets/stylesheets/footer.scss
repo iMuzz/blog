@@ -1,0 +1,85 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+
+/* Font */
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  font-size: 1.2em;
+  speak: none;
+}
+
+
+$border: #e3e3e3;
+
+body {
+  background-color: #fff;
+  padding: 2em 0 0;
+  font-family: Roboto, sans-serif;
+  font-size: 75%;
+  color: #444;
+}
+
+footer {
+  display: block;
+  height: 100px;
+  padding: 1em 0 0;
+}
+
+.inner {
+  height: 100px;
+  width: 100%;
+}
+
+.copyright {
+  background-color: white;
+  line-height: 100px;
+  width: 56.6%;
+  float: left;
+  border-left: 1px solid $border;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  span {
+    margin-left: 10%;
+    letter-spacing: 2px;
+  }
+}
+
+.social {
+  float: left;
+  width: 43.3%;
+  background-color: $border;
+  line-height: 100px;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  .icons {
+     list-style: none;
+    .col-4 {
+      width: 25%;
+      float: left;
+      
+      a {
+        text-align: center;
+        background-color: white;
+        margin: 0 0 0px 1px;
+        display: block;
+        transition: background-color 0.3s;
+        &:hover {
+          transition: background-color 0.3s;
+          background-color: $border;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
