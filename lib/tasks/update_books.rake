@@ -1,6 +1,6 @@
 namespace :fetch_books do
 
   task goodreads: :environment do
-    "Test!"
+    Book.updateGoodReads
   end
 end
