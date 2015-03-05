@@ -1,5 +1,6 @@
 class Book < ActiveRecord::Base
-  include WelcomeHelper
+  include GoodReadsFetcher
+
   has_one :read
   validates_uniqueness_of :title, scope: :author
   validates_presence_of :title, :author
