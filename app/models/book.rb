@@ -1,7 +1,7 @@
 class Book < ActiveRecord::Base
   include GoodReadsFetcher
 
-  has_one :read
+  has_one :read, dependent: :destroy
   validates_uniqueness_of :title, scope: :author
   validates_presence_of :title, :author
 
